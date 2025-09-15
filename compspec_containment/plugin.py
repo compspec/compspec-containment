@@ -1,6 +1,5 @@
 import argparse
 import logging
-import sys
 
 from compspec.create.jsongraph import JsonGraph
 from compspec.plugin import PluginBase
@@ -9,12 +8,21 @@ import compspec_containment.defaults as defaults
 
 logger = logging.getLogger("compspec-containment")
 
-try:
+
+def get_resource_graph():
+    """
+    Wrapper function to get resource graph
+
+    Primarily so import of plugin does not error with ImportError
+    """
+    # Allow error to trigger here - should be caught by calling function
     import flux
     import flux.kvs
     from fluxion.resourcegraph.V1 import FluxionResourceGraphV1
-except ImportError:
-    sys.exit("Cannot import 'flux'. Please run extraction from a Flux instance.")
+
+    handle = flux.Flux()
+    rlite = flux.kvs.get(handle, "resource.R")
+    return FluxionResourceGraphV1(rlite)
 
 
 class ContainmentGraph(JsonGraph):
@@ -47,6 +55,18 @@ class Plugin(PluginBase):
             help="Cluster name for top level of graph",
         )
 
+    def detect(self):
+        """
+        Detect checks for import of Flux and generation of the graph.
+
+        If we can do this, we likely have a Flux instance.
+        """
+        try:
+            get_resource_graph()
+            return True
+        except ImportError:
+            return False
+
     def extract(self, args, extra):
         """
         Search a spack install for installed software
@@ -62,9 +82,7 @@ class Plugin(PluginBase):
         g.generate_root()
 
         # Get the R-lite spec to convert to JGF.
-        handle = flux.Flux()
-        rlite = flux.kvs.get(handle, "resource.R")
-        jgf = FluxionResourceGraphV1(rlite)
+        jgf = get_resource_graph()
         jgf.set_metadata(g.metadata)
 
         # Generate a dictionary with custom metadata
