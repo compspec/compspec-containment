@@ -24,7 +24,7 @@ In the dev container, try running an extraction for the Flux instance running:
 
 ```bash
 flux start --test-size=4
-compspec extract containment
+compspec extract containment cluster-a
 ```
 
 To save to file:
