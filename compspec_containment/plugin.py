@@ -15,18 +15,64 @@ def get_resource_graph():
 
     Primarily so import of plugin does not error with ImportError
     """
-    # Allow error to trigger here - should be caught by calling function
-    import flux
-    import flux.kvs
-    from fluxion.resourcegraph.V1 import FluxionResourceGraphV1
-
-    handle = flux.Flux()
-    rlite = flux.kvs.get(handle, "resource.R")
-    return FluxionResourceGraphV1(rlite)
+    # Create the containment graph (this checks flux imports, etc.)
+    g = ContainmentGraph("cluster")
+    g.metadata["type"] = "containment"
+    return g
 
 
 class ContainmentGraph(JsonGraph):
-    pass
+    """
+    The containment graph generates the Fluxion JGF V1
+    and converts to V2.
+    """
+
+    def __init__(self, *args, **kwargs):
+        """
+        Init ensures we can import and derive requirements.
+        """
+        super().__init__(*args, **kwargs)
+        import flux
+        from fluxion.resourcegraph.V1 import FluxionResourceGraphV1
+
+        self.handle = flux.Flux()
+
+        # By default generate JGFv1.
+        self.GraphClass = FluxionResourceGraphV1
+        self.generate_jgf_v1()
+
+    def generate_jgf_v1(self):
+        """
+        Call functions to generate JGF V1
+        """
+        import flux.kvs
+
+        rlite = flux.kvs.get(self.handle, "resource.R")
+        self.jgfv1 = self.GraphClass(rlite)
+        self.to_jgfv2()
+
+    def to_jgfv2(self):
+        """
+        Convert the graph from version 1 to version 2.
+        """
+        for node in self.jgfv1.get_nodes():
+            # Node metadata has type and paths
+            m = node.get_metadata()
+            self.add_node(
+                m["type"],
+                path=m["paths"],
+                idx=node.get_id(),
+                count=m.get("id"),
+                rank=m.get("rank"),
+            )
+
+        for edge in self.jgfv1.get_edges():
+            self.add_edge(
+                source=edge.get_source(),
+                target=edge.get_target(),
+                metadata={},
+            )
+        return self.to_dict()
 
 
 class Plugin(PluginBase):
@@ -71,19 +117,10 @@ class Plugin(PluginBase):
         """
         Search a spack install for installed software
         """
-
-        # Create the containment graph
-        g = ContainmentGraph("cluster")
-        g.metadata["type"] = "containment"
+        # Get the R-lite spec to convert to JGF.
+        g = get_resource_graph()
         g.metadata["name"] = args.cluster
         g.metadata["install_name"] = args.name
 
-        # The root node is the cluster, although we don't use it from here"
-        g.generate_root()
-
-        # Get the R-lite spec to convert to JGF.
-        jgf = get_resource_graph()
-        jgf.set_metadata(g.metadata)
-
-        # Generate a dictionary with custom metadata
-        return jgf.to_JSON()
+        # We need to convert from V1 to V2
+        return g.to_jgfv2()
