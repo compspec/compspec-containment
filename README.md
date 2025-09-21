@@ -20,6 +20,13 @@ pip install compspec
 pip install compspec-containment
 ```
 
+Note that you'll need the `fluxion` Python module.
+
+```bash
+git clone --depth 1 https://github.com/flux-framework/flux-sched /tmp/flux-sched
+PYTHONPATH=$PYTHONPATH:/tmp/flux-sched/src/python
+```
+
 In the dev container, try running an extraction for the Flux instance running:
 
 ```bash
