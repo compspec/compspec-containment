@@ -1,7 +1,7 @@
 import argparse
 import logging
-import platform
 
+import compspec.utils as utils
 from compspec.create.jsongraph import JsonGraph
 from compspec.plugin import PluginBase
 
@@ -118,16 +118,16 @@ class Plugin(PluginBase):
         """
         Detect is a headless extraction.
         """
-        cluster = platform.node().split("-")[0]
-        return self._extract(cluster)
+        return self._extract(utils.get_cluster_name())
 
-    def _extract(self, cluster, name=None):
+    def _extract(self, cluster, name=None, hostname=None):
         """
         Extract a default containment subsystem
         """
         # Get the R-lite spec to convert to JGF.
         g = get_resource_graph()
         g.metadata["name"] = cluster
+        g.metadata["hostname"] = hostname or utils.get_hostname()
         g.metadata["install_name"] = name or self.name
 
         # We need to convert from V1 to V2
