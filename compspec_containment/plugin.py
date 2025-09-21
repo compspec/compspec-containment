@@ -1,5 +1,6 @@
 import argparse
 import logging
+import platform
 
 from compspec.create.jsongraph import JsonGraph
 from compspec.plugin import PluginBase
@@ -101,9 +102,9 @@ class Plugin(PluginBase):
             help="Cluster name for top level of graph",
         )
 
-    def detect(self):
+    def check(self):
         """
-        Detect checks for import of Flux and generation of the graph.
+        Check for import of Flux and generation of the graph.
 
         If we can do this, we likely have a Flux instance.
         """
@@ -113,14 +114,27 @@ class Plugin(PluginBase):
         except ImportError:
             return False
 
-    def extract(self, args, extra):
+    def detect(self):
         """
-        Search a spack install for installed software
+        Detect is a headless extraction.
+        """
+        cluster = platform.node().split("-")[0]
+        return self._extract(cluster)
+
+    def _extract(self, cluster, name=None):
+        """
+        Extract a default containment subsystem
         """
         # Get the R-lite spec to convert to JGF.
         g = get_resource_graph()
-        g.metadata["name"] = args.cluster
-        g.metadata["install_name"] = args.name
+        g.metadata["name"] = cluster
+        g.metadata["install_name"] = name or self.name
 
         # We need to convert from V1 to V2
         return g.to_jgfv2()
+
+    def extract(self, args, extra):
+        """
+        Extract a default containment subsystem
+        """
+        return self._extract(args.cluster, args.name)
