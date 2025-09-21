@@ -118,7 +118,7 @@ class Plugin(PluginBase):
         """
         Detect is a headless extraction.
         """
-        return self._extract(utils.get_cluster_name())
+        return self._extract(utils.get_local_cluster())
 
     def _extract(self, cluster, name=None, hostname=None):
         """
