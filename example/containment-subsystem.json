@@ -29,7 +29,7 @@
                     "uniq_id": 4,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261"
+                            "containment": "/cluster0/e1a21b7f05bd"
                         }
                     },
                     "size": 1,
@@ -48,7 +48,7 @@
                     "uniq_id": 0,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core0"
+                            "containment": "/cluster0/e1a21b7f05bd/core0"
                         }
                     },
                     "size": 1,
@@ -67,7 +67,7 @@
                     "uniq_id": 1,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core1"
+                            "containment": "/cluster0/e1a21b7f05bd/core1"
                         }
                     },
                     "size": 1,
@@ -86,7 +86,7 @@
                     "uniq_id": 2,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core2"
+                            "containment": "/cluster0/e1a21b7f05bd/core2"
                         }
                     },
                     "size": 1,
@@ -105,7 +105,7 @@
                     "uniq_id": 3,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core3"
+                            "containment": "/cluster0/e1a21b7f05bd/core3"
                         }
                     },
                     "size": 1,
@@ -124,7 +124,7 @@
                     "uniq_id": 4,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core4"
+                            "containment": "/cluster0/e1a21b7f05bd/core4"
                         }
                     },
                     "size": 1,
@@ -143,7 +143,7 @@
                     "uniq_id": 5,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core5"
+                            "containment": "/cluster0/e1a21b7f05bd/core5"
                         }
                     },
                     "size": 1,
@@ -162,7 +162,7 @@
                     "uniq_id": 6,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core6"
+                            "containment": "/cluster0/e1a21b7f05bd/core6"
                         }
                     },
                     "size": 1,
@@ -181,7 +181,7 @@
                     "uniq_id": 7,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core7"
+                            "containment": "/cluster0/e1a21b7f05bd/core7"
                         }
                     },
                     "size": 1,
@@ -200,7 +200,7 @@
                     "uniq_id": 5,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261"
+                            "containment": "/cluster0/e1a21b7f05bd"
                         }
                     },
                     "size": 1,
@@ -219,7 +219,7 @@
                     "uniq_id": 0,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core0"
+                            "containment": "/cluster0/e1a21b7f05bd/core0"
                         }
                     },
                     "size": 1,
@@ -238,7 +238,7 @@
                     "uniq_id": 1,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core1"
+                            "containment": "/cluster0/e1a21b7f05bd/core1"
                         }
                     },
                     "size": 1,
@@ -257,7 +257,7 @@
                     "uniq_id": 2,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core2"
+                            "containment": "/cluster0/e1a21b7f05bd/core2"
                         }
                     },
                     "size": 1,
@@ -276,7 +276,7 @@
                     "uniq_id": 3,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core3"
+                            "containment": "/cluster0/e1a21b7f05bd/core3"
                         }
                     },
                     "size": 1,
@@ -295,7 +295,7 @@
                     "uniq_id": 4,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core4"
+                            "containment": "/cluster0/e1a21b7f05bd/core4"
                         }
                     },
                     "size": 1,
@@ -314,7 +314,7 @@
                     "uniq_id": 5,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core5"
+                            "containment": "/cluster0/e1a21b7f05bd/core5"
                         }
                     },
                     "size": 1,
@@ -333,7 +333,7 @@
                     "uniq_id": 6,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core6"
+                            "containment": "/cluster0/e1a21b7f05bd/core6"
                         }
                     },
                     "size": 1,
@@ -352,7 +352,7 @@
                     "uniq_id": 7,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core7"
+                            "containment": "/cluster0/e1a21b7f05bd/core7"
                         }
                     },
                     "size": 1,
@@ -371,7 +371,7 @@
                     "uniq_id": 6,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261"
+                            "containment": "/cluster0/e1a21b7f05bd"
                         }
                     },
                     "size": 1,
@@ -390,7 +390,7 @@
                     "uniq_id": 0,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core0"
+                            "containment": "/cluster0/e1a21b7f05bd/core0"
                         }
                     },
                     "size": 1,
@@ -409,7 +409,7 @@
                     "uniq_id": 1,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core1"
+                            "containment": "/cluster0/e1a21b7f05bd/core1"
                         }
                     },
                     "size": 1,
@@ -428,7 +428,7 @@
                     "uniq_id": 2,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core2"
+                            "containment": "/cluster0/e1a21b7f05bd/core2"
                         }
                     },
                     "size": 1,
@@ -447,7 +447,7 @@
                     "uniq_id": 3,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core3"
+                            "containment": "/cluster0/e1a21b7f05bd/core3"
                         }
                     },
                     "size": 1,
@@ -466,7 +466,7 @@
                     "uniq_id": 4,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core4"
+                            "containment": "/cluster0/e1a21b7f05bd/core4"
                         }
                     },
                     "size": 1,
@@ -485,7 +485,7 @@
                     "uniq_id": 5,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core5"
+                            "containment": "/cluster0/e1a21b7f05bd/core5"
                         }
                     },
                     "size": 1,
@@ -504,7 +504,7 @@
                     "uniq_id": 6,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core6"
+                            "containment": "/cluster0/e1a21b7f05bd/core6"
                         }
                     },
                     "size": 1,
@@ -523,7 +523,7 @@
                     "uniq_id": 7,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core7"
+                            "containment": "/cluster0/e1a21b7f05bd/core7"
                         }
                     },
                     "size": 1,
@@ -542,7 +542,7 @@
                     "uniq_id": 7,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261"
+                            "containment": "/cluster0/e1a21b7f05bd"
                         }
                     },
                     "size": 1,
@@ -561,7 +561,7 @@
                     "uniq_id": 0,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core0"
+                            "containment": "/cluster0/e1a21b7f05bd/core0"
                         }
                     },
                     "size": 1,
@@ -580,7 +580,7 @@
                     "uniq_id": 1,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core1"
+                            "containment": "/cluster0/e1a21b7f05bd/core1"
                         }
                     },
                     "size": 1,
@@ -599,7 +599,7 @@
                     "uniq_id": 2,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core2"
+                            "containment": "/cluster0/e1a21b7f05bd/core2"
                         }
                     },
                     "size": 1,
@@ -618,7 +618,7 @@
                     "uniq_id": 3,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core3"
+                            "containment": "/cluster0/e1a21b7f05bd/core3"
                         }
                     },
                     "size": 1,
@@ -637,7 +637,7 @@
                     "uniq_id": 4,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core4"
+                            "containment": "/cluster0/e1a21b7f05bd/core4"
                         }
                     },
                     "size": 1,
@@ -656,7 +656,7 @@
                     "uniq_id": 5,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core5"
+                            "containment": "/cluster0/e1a21b7f05bd/core5"
                         }
                     },
                     "size": 1,
@@ -675,7 +675,7 @@
                     "uniq_id": 6,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core6"
+                            "containment": "/cluster0/e1a21b7f05bd/core6"
                         }
                     },
                     "size": 1,
@@ -694,7 +694,7 @@
                     "uniq_id": 7,
                     "containment": {
                         "paths": {
-                            "containment": "/cluster0/08ba6e8f4261/core7"
+                            "containment": "/cluster0/e1a21b7f05bd/core7"
                         }
                     },
                     "size": 1,
@@ -999,6 +999,8 @@
     "metadata": {
         "type": "containment",
         "name": "a",
-        "install_name": "compat-experiment"
+        "hostname": "e1a21b7f05bd",
+        "install_name": "compat-experiment",
+        "flux_uri": "local:///tmp/flux-mBG5gA/local-0"
     }
 }
