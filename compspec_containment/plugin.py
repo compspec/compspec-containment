@@ -1,5 +1,6 @@
 import argparse
 import logging
+import os
 
 import compspec.utils as utils
 from compspec.create.jsongraph import JsonGraph
@@ -129,6 +130,11 @@ class Plugin(PluginBase):
         g.metadata["name"] = cluster
         g.metadata["hostname"] = hostname or utils.get_hostname()
         g.metadata["install_name"] = name or self.name
+
+        # Add the Flux URI for later communication
+        g.metadata["flux_uri"] = os.environ.get("FLUX_URI")
+        if not g.metadata["flux_uri"]:
+            print("WARNING: FLUX_URI not detected.")
 
         # We need to convert from V1 to V2
         return g.to_jgfv2()
